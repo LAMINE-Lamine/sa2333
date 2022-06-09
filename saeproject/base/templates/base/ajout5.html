@@ -1,0 +1,11 @@
+{% extends "base/main.html" %}
+{% block title %}
+Film
+{% endblock %}
+{% block content %}
+    <form action="/base/traitement5/" method="POST">
+    {% csrf_token %}
+    {{ form.as_ul }}
+    <input type="submit" value="Send Data"/>
+    </form>
+{% endblock %}

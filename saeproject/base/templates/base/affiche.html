@@ -1,0 +1,25 @@
+
+ <a href="/base/ajout3/{{categorie.id}}/"><h1 class="id">nouveaux film disponible dans la categorie : {{categorie}}</h1></a>
+
+<p>Voici ici les details de la categorie suivant {{categorie}}  :</p>
+ <li> {{f}}  </li>
+{% for f in liste2 %}
+<article class="info_film">
+
+
+      <li>-l'id du film est ' {{f.id}} '.  </li> <br>
+      <li>-Le createur de cette arme est  '{{f.createur}} ' . </li><br>
+      <li>-Elle a été cree le  {{f.date_creation}} . </li><br>
+      <li>-Elle existe sous le nombre de'{{f.nombre_d_exemplaire}}' exemplaire. </li><br>
+       <li>-Et elle a une porté  de {{f.nombre_d_exemplaire}}m. </li><br>
+        <li><img src="{{f.affiche}}" height=150px >
+
+
+
+ <li>  <button name="supp"><a href="/delete2/{{f.id}}"> effacer  </a></button>
+                <button name="upd"><a href="/update2/{{f.id}}"> update </a></button></li>
+    </article>
+
+{%endfor%}
+
+{% endblock %}

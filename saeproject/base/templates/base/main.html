@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+</head>
+<body>
+     <nav class="oriantationpage">
+         <div class="Lesclassesdarmes">Bases de données speciales films</div>
+         <ul class="onglet" id="list">
+            <li class="list"><a href="/base/">Home</a></li>
+            <li class="list"> <a href="/base/ajout/">Categorie films</a></li>
+            <li class="list"><a href="/base/ajout2/">Film</a></li>
+             <li class="list"><a href="/ajout4/<int:id>/">des acteurs</a></li>
+             <li class="list"><a href="/base/ajout5/">des personnes</a></li>
+             <li class="list"><a href="/base/ajout5/">des commentaires sur les films </a></li>
+
+            </ul>
+
+         <div class="home" id="categorie" ></div>
+          </nav>
+
+
+      {% block content %}
+
+      {% endblock %}
+
+</body>
+</html>
